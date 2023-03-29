@@ -1,0 +1,34 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1680130765291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680130770426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n         <p><i class=\"fas fa-play\"> - start</i></p>\r\n         <p><i class=\"fas fa-pause\"> - pause</i></p>\r\n         <p><i class=\"fas fa-stop\"> - -stop</i></p>\r\n-        <p><i class=\"fas fa-times\"> - skasuj wszystko</i></p>\r\n+        <p><i class=\"fas fa-times\"> - delete everything</i></p>\r\n         <p><strong>archive</strong> - look up previous records</p>\r\n         <button class=\"close\">Close</button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1680130778884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n \r\n         <p><i class=\"fas fa-play\"> - start</i></p>\r\n         <p><i class=\"fas fa-pause\"> - pause</i></p>\r\n         <p><i class=\"fas fa-stop\"> - -stop</i></p>\r\n-        <p><i class=\"fas fa-times\"> - delete everything</i></p>\r\n+        <p><i class=\"fas fa-times\"> - delete every record</i></p>\r\n         <p><strong>archive</strong> - look up previous records</p>\r\n         <button class=\"close\">Close</button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1680130787369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n-    <title>Magic 8 ball</title>\r\n+    <title>Stopwatch</title>\r\n     <link\r\n       rel=\"stylesheet\"\r\n       href=\"https://fonts.googleapis.com/css?family=Sofia|Trirong\"\r\n     />\r\n"
+                },
+                {
+                    "date": 1680130960760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       </p>\r\n \r\n       <h1>Stopwatch</h1>\r\n       <div class=\"stopwatch\">0:00</div>\r\n-      <p class=\"time\">0:00</p>\r\n+      <p class=\"time\"></p>\r\n       <div class=\"buttons\">\r\n         <button class=\"start\"><i class=\"fas fa-play\"></i></button>\r\n         <button class=\"pause\"><i class=\"fas fa-pause\"></i></button>\r\n         <button class=\"stop\"><i class=\"fas fa-stop\"></i></button>\r\n"
+                }
+            ],
+            "date": 1680130765291,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Magic 8 ball</title>\r\n    <link\r\n      rel=\"stylesheet\"\r\n      href=\"https://fonts.googleapis.com/css?family=Sofia|Trirong\"\r\n    />\r\n    <link rel=\"stylesheet\" href=\"style.css\" />\r\n    <script\r\n      src=\"https://kit.fontawesome.com/b106b5fdab.js\"\r\n      crossorigin=\"anonymous\"\r\n    ></script>\r\n  </head>\r\n  <body>\r\n    <main>\r\n      <p class=\"info\">\r\n        <i class=\"fas fa-question\"></i>\r\n      </p>\r\n\r\n      <h1>Stopwatch</h1>\r\n      <div class=\"stopwatch\">0:00</div>\r\n      <p class=\"time\">0:00</p>\r\n      <div class=\"buttons\">\r\n        <button class=\"start\"><i class=\"fas fa-play\"></i></button>\r\n        <button class=\"pause\"><i class=\"fas fa-pause\"></i></button>\r\n        <button class=\"stop\"><i class=\"fas fa-stop\"></i></button>\r\n        <button class=\"reset\"><i class=\"fas fa-times\"></i></button>\r\n        <button class=\"history\">Archive</button>\r\n      </div>\r\n\r\n      <ul class=\"time-list\"></ul>\r\n    </main>\r\n    <div class=\"modal-shadow\">\r\n      <div class=\"modal\">\r\n        <h3>Instruction:</h3>\r\n\r\n        <p><i class=\"fas fa-play\"> - start</i></p>\r\n        <p><i class=\"fas fa-pause\"> - pause</i></p>\r\n        <p><i class=\"fas fa-stop\"> - -stop</i></p>\r\n        <p><i class=\"fas fa-times\"> - skasuj wszystko</i></p>\r\n        <p><strong>archive</strong> - look up previous records</p>\r\n        <button class=\"close\">Close</button>\r\n      </div>\r\n    </div>\r\n\r\n    <script src=\"script.js\"></script>\r\n  </body>\r\n</html>\r\n"
+        }
+    ]
+}

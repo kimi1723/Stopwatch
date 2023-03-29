@@ -1,0 +1,26 @@
+{
+    "sourceFile": "script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1680130861529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680130872677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n const clearStuff = () => {\r\n \ttimeList.textContent = '';\r\n \tclearInterval(countTime);\r\n \tstopwatch.textContent = '0:00';\r\n-\ttime.textContent = '';\r\n+\r\n \tseconds = 0;\r\n \tminutes = 0;\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1680130904564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,16 +47,16 @@\n };\r\n \r\n const handleReset = () => {\r\n \tclearStuff();\r\n+  \ttime.textContent = '';\r\n \ttimesArr = [];\r\n };\r\n \r\n const clearStuff = () => {\r\n \ttimeList.textContent = '';\r\n \tclearInterval(countTime);\r\n \tstopwatch.textContent = '0:00';\r\n-\r\n \tseconds = 0;\r\n \tminutes = 0;\r\n };\r\n \r\n"
+                }
+            ],
+            "date": 1680130861529,
+            "name": "Commit-0",
+            "content": "const startBtn = document.querySelector('.start');\r\nconst pauseBtn = document.querySelector('.pause');\r\nconst stopBtn = document.querySelector('.stop');\r\nconst resetBtn = document.querySelector('.reset');\r\nconst historyBtn = document.querySelector('.history');\r\nconst stopwatch = document.querySelector('.stopwatch');\r\nconst time = document.querySelector('.time');\r\nconst timeList = document.querySelector('.time-list');\r\nconst infoBtn = document.querySelector('.info');\r\nconst modalShadow = document.querySelector('.modal-shadow');\r\nconst closeModalBtn = document.querySelector('.close');\r\nconst timings = document.querySelector('.timings');\r\nlet countTime;\r\nlet minutes = 0,\r\n  seconds = 0;\r\n\r\nlet timesArr = [];\r\nconst handleStart = () => {\r\n  clearInterval(countTime);\r\n\r\n  countTime = setInterval(() => {\r\n    seconds++;\r\n    stopwatch.textContent = `${minutes}:0${seconds}`;\r\n\r\n    if (seconds > 59) {\r\n      seconds = 0;\r\n      minutes++;\r\n      stopwatch.textContent = `${minutes}:0${seconds}`;\r\n    } else if (seconds > 9) {\r\n      stopwatch.textContent = `${minutes}:${seconds}`;\r\n    }\r\n  }, 100);\r\n};\r\n\r\nconst handlePause = () => {\r\n  clearInterval(countTime);\r\n};\r\n\r\nconst handleStop = () => {\r\n  time.textContent = `Last lap: ${stopwatch.textContent} `;\r\n\r\n  if (stopwatch.textContent !== '0:00') {\r\n    time.style.visibility = 'visible';\r\n    timesArr.push(stopwatch.textContent);\r\n  }\r\n  clearStuff();\r\n};\r\n\r\nconst handleReset = () => {\r\n  clearStuff();\r\n  timesArr = [];\r\n};\r\n\r\nconst clearStuff = () => {\r\n  timeList.textContent = '';\r\n  clearInterval(countTime);\r\n  stopwatch.textContent = '0:00';\r\n  time.textContent = ''\r\n  seconds = 0;\r\n  minutes = 0;\r\n};\r\n\r\nconst showHistory = () => {\r\n  let num = 1;\r\n\r\n  timeList.textContent = '';\r\n\r\n  const newTime = document.createElement('li');\r\n\r\n  timesArr.forEach((time) => {\r\n    const newTime = document.createElement('li');\r\n    newTime.innerHTML = `Lap number ${num}: <span>${time} </span>`;\r\n    timeList.append(newTime);\r\n    num++;\r\n  });\r\n};\r\n\r\nconst showModal = () => {\r\n  console.log(modalShadow.style.display);\r\n  if (modalShadow.style.display !== 'block') {\r\n    modalShadow.style.display = 'block';\r\n  } else {\r\n    modalShadow.style.display = 'none';\r\n  }\r\n  modalShadow.classList.toggle('modal-animation');\r\n};\r\n\r\nstartBtn.addEventListener('click', handleStart);\r\npauseBtn.addEventListener('click', handlePause);\r\nstopBtn.addEventListener('click', handleStop);\r\nresetBtn.addEventListener('click', handleReset);\r\nhistoryBtn.addEventListener('click', showHistory);\r\ninfoBtn.addEventListener('click', showModal);\r\ncloseModalBtn.addEventListener('click', showModal);\r\nwindow.addEventListener('click', (e) =>\r\n  e.target === modalShadow ? showModal() : false\r\n);\r\n"
+        }
+    ]
+}

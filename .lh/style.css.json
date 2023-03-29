@@ -1,0 +1,26 @@
+{
+    "sourceFile": "style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1680130937481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680130980381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,8 +63,9 @@\n \tvisibility: hidden;\r\n \tcolor: var(--second-color);\r\n \tfont-size: 22px;\r\n \tmin-height: 1ch;\r\n+  width: 1px;\r\n }\r\n \r\n .buttons {\r\n \tdisplay: flex;\r\n"
+                },
+                {
+                    "date": 1680130997330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \tvisibility: hidden;\r\n \tcolor: var(--second-color);\r\n \tfont-size: 22px;\r\n \tmin-height: 1ch;\r\n-\twidth: 1px;\r\n+\r\n }\r\n \r\n .buttons {\r\n \tdisplay: flex;\r\n"
+                }
+            ],
+            "date": 1680130937481,
+            "name": "Commit-0",
+            "content": "* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n:root {\r\n  --first-color: #fa1406;\r\n  --second-color: #d2c7be;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  min-height: 100vh;\r\n  font-family: 'Montserrat', sans-serif;\r\n  background-color: #333;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  padding: 50px;\r\n  width: 800px;\r\n  background: radial-gradient(\r\n    circle,\r\n    rgba(43, 44, 46, 1) 0%,\r\n    rgba(25, 25, 25, 1) 93%\r\n  );\r\n  border-radius: 8px;\r\n  box-shadow: 5px 5px 10px black;\r\n  color: #fff;\r\n}\r\n\r\n.info {\r\n  position: absolute;\r\n  top: 6px;\r\n  right: 14px;\r\n  padding: 20px;\r\n  font-size: 24px;\r\n  color: var(--second-color);\r\n  cursor: pointer;\r\n  transition: color 0.3s;\r\n}\r\n\r\n.info:hover {\r\n  color: var(--first-color);\r\n}\r\n\r\nh1 {\r\n  margin-bottom: 20px;\r\n  font-size: 60px;\r\n  font-weight: lighter;\r\n}\r\n\r\n.stopwatch {\r\n  font-size: 72px;\r\n  color: var(--first-color);\r\n}\r\n\r\n.time {\r\n  visibility: hidden;\r\n  color: var(--second-color);\r\n  font-size: 22px;\r\n  min-height: 1ch;\r\n}\r\n\r\n.buttons {\r\n  display: flex;\r\n  justify-content: space-around;\r\n  flex-wrap: wrap;\r\n  margin: 30px;\r\n}\r\n\r\nbutton {\r\n  margin: 10px;\r\n  padding: 10px 20px;\r\n  width: 20%;\r\n  color: #fff;\r\n  font-size: 22px;\r\n  background-color: transparent;\r\n  border: 1px solid var(--first-color);\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  transition: background-color 0.3s;\r\n}\r\n\r\n.history {\r\n  flex-grow: 1;\r\n  text-transform: uppercase;\r\n}\r\n\r\nbutton:hover,\r\nbutton:focus {\r\n  background-color: var(--first-color);\r\n  outline: none;\r\n}\r\n\r\n.time-list li {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 300px;\r\n  font-size: 22px;\r\n  color: var(--second-color);\r\n}\r\n\r\n.time-list span {\r\n  font-weight: bold;\r\n}\r\n\r\n.modal-shadow {\r\n  display: none;\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(0, 0, 0, 0.65);\r\n}\r\n\r\n.modal {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  width: 600px;\r\n  height: 360px;\r\n  padding: 30px 60px;\r\n  border-radius: 15px;\r\n  background-color: rgb(245, 245, 245);\r\n}\r\n\r\n.modal h3 {\r\n  font-size: 30px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.modal p {\r\n  margin-bottom: 10px;\r\n  margin-left: 20px;\r\n  font-size: 20px;\r\n}\r\n\r\n.modal .close {\r\n  display: block;\r\n  margin: 40px auto 0;\r\n  width: 200px;\r\n  background-color: var(--first-color);\r\n  transition: background-color 0.3s;\r\n}\r\n\r\n.modal .close:hover {\r\n  background-color: rgb(226, 36, 26);\r\n}\r\n\r\n.modal-animation {\r\n  animation: show-modal 0.5s;\r\n}\r\n\r\n@keyframes show-modal {\r\n  0% {\r\n    opacity: 0;\r\n  }\r\n\r\n  100% {\r\n    opacity: 1;\r\n  }\r\n}\r\n"
+        }
+    ]
+}
